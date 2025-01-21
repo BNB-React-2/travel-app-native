@@ -1,5 +1,6 @@
 import { Categories } from '@/features/categories/components/Categories';
 import { FilterTags } from '@/features/categories/components/FilterTags';
+import { DestinationList } from '@/features/destinations/components/List';
 import { FontAwesome } from '@expo/vector-icons';
 import { useState } from 'react';
 import {
@@ -65,6 +66,15 @@ export default function HomeScreen() {
         {/* Filter Tags */}
         <View className="mb-4">
           <FilterTags activeTag={activeTag} setActiveTag={setActiveTag} />
+        </View>
+
+        {/* Destinations List */}
+        <View>
+          <DestinationList
+            search={search}
+            activeCategory={activeCategory}
+            activeTag={activeTag}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>

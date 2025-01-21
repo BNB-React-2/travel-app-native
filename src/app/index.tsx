@@ -1,5 +1,6 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 import {
   heightPercentageToDP as hp,
@@ -11,6 +12,7 @@ export default function WelcomeScreen() {
 
   return (
     <View className="flex-1 flex justify-end">
+      <StatusBar />
       <Image
         source={require('../assets/images/welcome.png')}
         className="h-full w-full absolute"
